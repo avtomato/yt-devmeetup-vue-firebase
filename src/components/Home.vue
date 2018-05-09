@@ -10,11 +10,12 @@
     </v-layout>
     <v-layout row wrap class="mt-2">
       <v-flex xs12>
-        <v-carousel>
+        <v-carousel style="cursor: pointer;">
           <v-carousel-item
             v-for="meetup in meetups"
             :src="meetup.imageUrl"
-            :key="meetup.id">
+            :key="meetup.id"
+            @click.native="onLoadMeetup(meetup.id)">
             <div class="title">
               {{ meetup.title }}
             </div>
@@ -36,10 +37,15 @@ export default {
   data () {
     return {
       meetups: [
-        {imageUrl: 'https://cdn-images-1.medium.com/max/2000/0*EAHDo4LNL0Qq1FjB.jpg', id: 1, title: 'Meetup in New York'},
-        {imageUrl: 'https://cdn-images-1.medium.com/max/2000/0*YZ_AzvnD9in4X1Y0.png', id: 2, title: 'Meetup in Paris'},
-        {imageUrl: 'https://cdn-images-1.medium.com/max/2000/0*LyP8lviSfAcPmTT7.png', id: 3, title: 'Meetup in Moscow'}
+        {imageUrl: 'https://cdn-images-1.medium.com/max/2000/0*YZ_AzvnD9in4X1Y0.png', id: 1, title: 'Meetup in New York'},
+        {imageUrl: 'https://cdn-images-1.medium.com/max/2000/0*ia6oiF3zdYilEjdo.jpg', id: 2, title: 'Meetup in Paris'},
+        {imageUrl: 'https://cdn-images-1.medium.com/max/2000/0*EAHDo4LNL0Qq1FjB.jpg', id: 3, title: 'Meetup in Moscow'}
       ]
+    }
+  },
+  methods: {
+    onLoadMeetup (id) {
+      this.$router.push('/meetups/' + id)
     }
   }
 }
