@@ -34,13 +34,9 @@
 <script>
 export default {
   name: 'Home',
-  data () {
-    return {
-      meetups: [
-        {imageUrl: 'https://cdn-images-1.medium.com/max/2000/0*YZ_AzvnD9in4X1Y0.png', id: 1, title: 'Meetup in New York'},
-        {imageUrl: 'https://cdn-images-1.medium.com/max/2000/0*ia6oiF3zdYilEjdo.jpg', id: 2, title: 'Meetup in Paris'},
-        {imageUrl: 'https://cdn-images-1.medium.com/max/2000/0*EAHDo4LNL0Qq1FjB.jpg', id: 3, title: 'Meetup in Moscow'}
-      ]
+  computed: {
+    meetups () {
+      return this.$store.getters.featuredMeetups
     }
   },
   methods: {
