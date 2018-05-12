@@ -11,8 +11,8 @@
             height="400px">
           </v-card-media>
           <v-card-text>
-            <div class="info--text">{{ meetup.date }} - Where it takes place</div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur culpa cumque deleniti ducimus, esse facere fuga molestiae molestias, optio reiciendis rerum sapiente! Aliquid aspernatur eius eligendi quibusdam vero? Accusantium, hic.</div>
+            <div class="info--text">{{ meetup.date }} - {{ meetup.location }}</div>
+            <div>{{ meetup.description }}</div>
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
