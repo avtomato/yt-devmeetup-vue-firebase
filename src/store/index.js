@@ -10,7 +10,7 @@ export const store = new Vuex.Store({
         imageUrl: 'https://cdn-images-1.medium.com/max/2000/0*YZ_AzvnD9in4X1Y0.png',
         id: '1',
         title: 'Meetup in New York',
-        date: '2017-07-17',
+        date: new Date(),
         location: 'New York',
         description: 'New York, New York!'
       },
@@ -18,7 +18,7 @@ export const store = new Vuex.Store({
         imageUrl: 'https://cdn-images-1.medium.com/max/2000/0*ia6oiF3zdYilEjdo.jpg',
         id: '2',
         title: 'Meetup in Paris',
-        date: '2017-07-19',
+        date: new Date(),
         location: 'Paris',
         description: 'It\'s Paris'
       },
@@ -26,7 +26,7 @@ export const store = new Vuex.Store({
         imageUrl: 'https://cdn-images-1.medium.com/max/2000/0*EAHDo4LNL0Qq1FjB.jpg',
         id: '3',
         title: 'Meetup in Moscow',
-        date: '2017-07-21',
+        date: new Date(),
         location: 'Moscow'
       }
     ],
