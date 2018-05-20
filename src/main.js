@@ -1,18 +1,20 @@
 import Vue from 'vue'
-import App from './App'
-import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+import * as firebase from 'firebase'
+import App from './App'
+import router from './router'
 import { store } from './store'
 import DateFilter from './filters/date'
-import * as firebase from 'firebase'
 import AlertCmp from './components/Shared/Alert'
+import EditMeetupDetailsDialog from './components/Meetup/Edit/EditMeetupDetailsDialog'
 
 Vue.use(Vuetify)
 Vue.config.productionTip = false
 
 Vue.filter('date', DateFilter)
 Vue.component('app-alert', AlertCmp)
+Vue.component('app-edit-meetup-details-dialog', EditMeetupDetailsDialog)
 
 /* eslint-disable no-new */
 new Vue({
